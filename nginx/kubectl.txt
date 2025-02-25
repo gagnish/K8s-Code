@@ -35,7 +35,7 @@ kubectl get pods -n kube-system -l app.kubernetes.io/name=aws-load-balancer-cont
 
 kubectl exec -it aws-load-balancer-controller-577d7f46d5-49w87 -n kube-system -- cat /var/run/secrets/eks.amazonaws.com/serviceaccount/token
 
-aws eks --region us-east-1 update-kubeconfig --name test
+aws eks --region us-east-1 update-kubeconfig --name eks-1
 
 kubectl run -i \
     --tty load-generator \
